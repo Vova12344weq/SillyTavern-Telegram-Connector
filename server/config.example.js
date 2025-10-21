@@ -1,18 +1,47 @@
-// config.example.js
-// Telegram Bot配置示例
-// 使用方法: 复制此文件为config.js，然后修改下面的配置
+// config.js
+// Reference configuration file for the advanced version of server.js
 
 module.exports = {
-    // 替换成你自己的Telegram Bot Token
-    telegramToken: 'YOUR_TELEGRAM_BOT_TOKEN_HERE',
+    // --- KEY SETTINGS ---
 
-    // WebSocket服务器端口
+    // 1. YOUR BOT SECRET TOKEN
+    // Insert your current token obtained from @BotFather here.
+    // NEVER share this token with anyone.
+    telegramToken: '',
+
+    // 2. YOUR TELEGRAM GROUP ID
+    // Make sure this is the ID of the group where the game will take place.
+    // Group chat IDs usually start with "-".
+    chatId: -, // Replace with your group ID
+
+    // 3. WebSocket port (usually can be left as is)
     wssPort: 2333,
 
-    // 允许与机器人交互的Telegram用户ID白名单
-    // 将你自己的Telegram User ID（以及其他你允许的用户的ID）添加到一个数组中。
-    // 你可以通过与Telegram上的 @userinfobot 聊天来获取你的ID。
-    // 如果留空数组 `[]`，则表示允许所有用户访问。
-    // 示例: [123456789, 987654321]
-    allowedUserIds: []
+    // --- PREFIX SETTINGS (VERY IMPORTANT) ---
+
+    // 4. Prefix format for players from Telegram.
+    // Using the most reliable "armor-piercing" option with angle brackets.
+    prefix: '<{username}>: ',
+
+    // 5. Prefix format for messages sent from SillyTavern (if needed).
+    // Keep a consistent style for maximum predictability.
+    hostPrefix: '<User>: ',
+
+    // 6. Prefix for AI responses (LEAVE EMPTY!)
+    // AI will generate its own prefix (e.g., "Character: ...").
+    aiPrefix: '',
+
+    // 7. Forward messages from SillyTavern to Telegram?
+    forwardHostMessages: true,
+
+    // 8. Language (for possible system messages)
+    language: 'us',
+
+    // --- SECURITY SETTINGS ---
+
+    // 9. List of allowed users (IDs).
+    // Currently empty, which means "allow everyone".
+    // For security, it's recommended to add the numeric IDs of all players here.
+    // Example: allowedUserIds: [12345678, 87654321, 374616460],
+    allowedUserIds: [], // <-- LIST CLEARED, ACCESS GRANTED TO ALL
 };
