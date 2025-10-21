@@ -132,7 +132,7 @@ This fork introduces **Game Sessions** for cooperative RP. The bot ignores non-g
 ## Support and Contributing
 If you have suggestions, bug reports, or ideas for new features — create an issue on GitHub.  
 
-**Original Project Notice**: The original author (qiqi20020612) has stepped away due to commitments. This fork continues development with a focus on multiplayer RP. Thanks for the amazing base!  
+**Original Project Notice**: As announced by the original author in their [README](https://github.com/qiqi20020612/SillyTavern-Telegram-Connector) ("Due to increasing busyness with work and life, I may no longer be able to maintain this project. The code is fully open-source, feel free to fork and develop it further."), the project is no longer maintained. This fork continues development with a focus on multiplayer RP features. Thanks for the amazing base!  
 
 ---
 
