@@ -119,12 +119,12 @@ In `config.js`, you can customize the prefix for user messages in multiplayer mo
 - `User: ...` (e.g., `Alice: Hello!`)
 - `[User]: ...` (e.g., `[Alice]: Hello!`)
 
-The AI's understanding of prefixes can vary by model:
-- `<User>: ...` has about 80% chance of being well-understood, as it resembles common XML/HTML tags.
-- `User: ...` has about 70% chance, as it's simple and similar to chat logs.
-- `[User]: ...` has about 60% chance, as brackets can sometimes be misinterpreted as special characters.
+Understanding AI prefixes can vary depending on the model:
+- `<User>: ...` has about a 90% chance of being understood, as it resembles common XML/HTML tags.
+- `User: ...` has about a 70% chance, as it is simple and similar to chat logs.
+- `[User]: ...` has about a 60% chance, as brackets can sometimes be mistaken for special characters.
 
-Experiment frequently with different formats to find the best variant for your specific AI model, as performance depends on the model's training data and context handling.
+The variety of formats is limitless. Regularly experiment with different formats to find the optimal option for your specific AI model, as performance depends on the model's training data and context processing.
 
 ---
 
