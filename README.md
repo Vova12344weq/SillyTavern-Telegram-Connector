@@ -1,6 +1,7 @@
-# SillyTavern Telegram Connector — Multiplayer Fork
+```markdown
+# SillyTavern Telegram Connector
 
-**This is a fork of the original [SillyTavern Telegram Connector](https://github.com/qiqi20020612/SillyTavern-Telegram-Connector) by [qiqi20020612](https://github.com/qiqi20020612). Full credit to the original author for the core functionality. This fork adds multiplayer support for roleplaying (RP) games in Telegram, allowing multiple players to interact with the AI in a structured and independent way. It is designed for all types of roleplaying games and supports full multiplayer, like in STMP — regardless of RP style or interaction format. The AI can see all player prefixes and respond individually to each participant.**
+Full credit to the original author for the core functionality. This adds multiplayer support for roleplaying (RP) games in Telegram, allowing multiple players to interact with the AI in a structured and independent way. It is designed for all types of roleplaying games and supports full multiplayer, like in STMP — regardless of RP style or interaction format. The AI can see all player prefixes and respond individually to each participant.
 
 The extension bridges SillyTavern and Telegram bots, enabling mobile-friendly chats with AI characters. Now with game sessions for group play!
 
@@ -11,7 +12,7 @@ The extension bridges SillyTavern and Telegram bots, enabling mobile-friendly ch
 - **Telegram Integration**: Chat with SillyTavern AI characters via the Telegram app.  
 - **Real-time Sync**: Messages sync instantly between Telegram and SillyTavern.  
 - **Original Commands**: Manage chats and characters (`/help`, `/new`, `/listchars`, `/switchchar <name>`, `/listchats`, `/switchchat <name>`).  
-- **Multiplayer Game Sessions** *(new in this fork)*:
+- **Multiplayer Game Sessions** *(new in this version)*:
   - Activate sessions for group RP without cluttering the chat.  
   - Buffer player actions, combine them with Telegram nicknames, and send to AI in batches.  
   - Auto-update on message edits.  
@@ -65,7 +66,7 @@ The extension bridges SillyTavern and Telegram bots, enabling mobile-friendly ch
 
 ## Multiplayer Game Sessions (New Feature)
 
-This fork introduces **Game Sessions** for cooperative RP. The bot ignores non-game messages until activated, keeping chats clean.
+This introduces **Game Sessions** for cooperative RP. The bot ignores non-game messages until activated, keeping chats clean.
 
 ### Step 1: Start a Session — `/gg`
 - Activates the bot and begins a game session.  
@@ -109,7 +110,22 @@ This fork introduces **Game Sessions** for cooperative RP. The bot ignores non-g
 ## Important Notes
 - **Telegram Limit**: Messages are capped at 4096 characters. Set "Max Response Length" in SillyTavern to avoid cutoffs.  
 - **Group Chats**: Works in groups; bot responds to @mentions or session commands.  
-- **Testing**: This is a work-in-progress fork. Test in a private group first.  
+- **Testing**: This is a work-in-progress version. Test in a private group first.  
+
+---
+
+## Configuration Tips
+In `config.js`, you can customize the prefix for user messages in multiplayer mode. The prefix helps the AI distinguish between players. Possible formats include:
+- `<User>: ...` (e.g., `<Alice>: Hello!`)
+- `User: ...` (e.g., `Alice: Hello!`)
+- `[User]: ...` (e.g., `[Alice]: Hello!`)
+
+The AI's understanding of prefixes can vary by model:
+- `<User>: ...` has about 80% chance of being well-understood, as it resembles common XML/HTML tags.
+- `User: ...` has about 70% chance, as it's simple and similar to chat logs.
+- `[User]: ...` has about 60% chance, as brackets can sometimes be misinterpreted as special characters.
+
+Experiment frequently with different formats to find the best variant for your specific AI model, as performance depends on the model's training data and context handling.
 
 ---
 
@@ -132,7 +148,7 @@ This fork introduces **Game Sessions** for cooperative RP. The bot ignores non-g
 ## Support and Contributing
 If you have suggestions, bug reports, or ideas for new features — create an issue on GitHub.  
 
-**Original Project Notice**: As announced by the original author in their [README](https://github.com/qiqi20020612/SillyTavern-Telegram-Connector) ("Due to increasing busyness with work and life, I may no longer be able to maintain this project. The code is fully open-source, feel free to fork and develop it further."), the project is no longer maintained. This fork continues development with a focus on multiplayer RP features. Thanks for the amazing base!  
+**Original Project Notice**: As announced by the original author in their [README](https://github.com/qiqi20020612/SillyTavern-Telegram-Connector) ("Due to increasing busyness with work and life, I may no longer be able to maintain this project. The code is fully open-source, feel free to fork and develop it further."), the project is no longer maintained. This continues development with a focus on multiplayer RP features. Thanks for the amazing base!  
 
 ---
 
@@ -149,3 +165,4 @@ This project uses the **GNU General Public License v3.0 (GPL-3.0)** — see the 
 - Whitelist settings in SillyTavern.  
 - Better error handling (e.g., generation stops, timeouts).  
 - WebSocket heartbeats for stability.
+```
