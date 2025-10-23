@@ -1,4 +1,3 @@
-```markdown
 # SillyTavern Telegram Connector
 
 Full credit to the original author for the core functionality. This adds multiplayer support for roleplaying (RP) games in Telegram, allowing multiple players to interact with the AI in a structured and independent way. It is designed for all types of roleplaying games and supports full multiplayer, like in STMP — regardless of RP style or interaction format. The AI can see all player prefixes and respond individually to each participant.
@@ -165,4 +164,3 @@ This project uses the **GNU General Public License v3.0 (GPL-3.0)** — see the 
 - Whitelist settings in SillyTavern.  
 - Better error handling (e.g., generation stops, timeouts).  
 - WebSocket heartbeats for stability.
-```
